@@ -26,7 +26,7 @@ class checkRole extends StatelessWidget {
           Map<String, dynamic> data =
               snapshot.data!.data() as Map<String, dynamic>;
           var role = Text("${data['role']}") as String;
-          //return role;
+
         }
 
         return Text("loading");
