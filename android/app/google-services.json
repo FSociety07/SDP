@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "576706625341",
+    "project_id": "pickngo-76ac4",
+    "storage_bucket": "pickngo-76ac4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:576706625341:android:f644cccb519befaaf04f54",
+        "android_client_info": {
+          "package_name": "com.example.pickngo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "576706625341-q10e8l4sagq1e9fk916j8u4d2llt69r9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvkdUIvfaZ93Za1UCp9P4G2DIFFORZoVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576706625341-q10e8l4sagq1e9fk916j8u4d2llt69r9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
