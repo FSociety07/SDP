@@ -5,6 +5,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pickngo/screens/registration.dart';
 import 'home_screen.dart';
 import 'package:pickngo/model/check_role.dart';
+import 'package:pickngo/model/check_role.dart';
+import 'package:pickngo/screens/user_home.dart';
+import 'package:pickngo/model/main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -80,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: MaterialButton(
             padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
             minWidth: MediaQuery.of(context).size.width,
-            onPressed: () {
+            onPressed: () async {
               signIn(emailController.text, passController.text);
             },
             child: const Text("Login",
@@ -140,18 +143,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     )))));
   }
 
-  final userRole = checkRole(FirebaseAuth.instance.currentUser!.uid);
-  checkRole cr = checkRole(FirebaseAuth.instance.currentUser!.uid);
-
   void signIn(String email, String password) async {
     if (_formkey.currentState!.validate()) {
       await _auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {
-                Fluttertoast.showToast(msg: "Login Successful"),
-                if ("user" == "user")
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const HomeScreen()))
+                Fluttertoast.showToast(msg: "Login success"),
               })
           .catchError((e) {
         Fluttertoast.showToast(msg: e!.message);

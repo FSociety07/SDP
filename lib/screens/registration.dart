@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:pickngo/model/user_model.dart';
+import 'package:pickngo/screens/user_home.dart';
 
 import 'home_screen.dart';
 
@@ -247,7 +248,7 @@ class _RegistrationState extends State<Registration> {
 
     Navigator.pushAndRemoveUntil(
         (context),
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(builder: (context) => userHomePage()),
         (route) => false);
   }
 }

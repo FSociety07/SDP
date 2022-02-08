@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:pickngo/screens/admin_home.dart';
+import 'package:pickngo/screens/user_home.dart';
 
 class checkRole extends StatelessWidget {
   final String documentId;
@@ -26,7 +28,9 @@ class checkRole extends StatelessWidget {
           Map<String, dynamic> data =
               snapshot.data!.data() as Map<String, dynamic>;
           var role = Text("${data['role']}") as String;
-
+          if (role == 'user') {
+            return userHomePage();
+          }
         }
 
         return Text("loading");
