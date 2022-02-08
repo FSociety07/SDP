@@ -4,8 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pickngo/screens/registration.dart';
 import 'home_screen.dart';
-import 'package:pickngo/model/check_role.dart';
-import 'package:pickngo/model/check_role.dart';
 import 'package:pickngo/screens/user_home.dart';
 import 'package:pickngo/model/main_screen.dart';
 

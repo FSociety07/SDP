@@ -26,8 +26,10 @@ class MainScreen extends StatelessWidget {
                   final user = userDoc!.data() as Map;
                   if (user['role'] == 'admin') {
                     return adminHomePage();
-                  } else {
+                  } else if (user['role'] == 'user') {
                     return userHomePage();
+                  } else {
+                    return riderHomePage();
                   }
                 } else {
                   return Material(
