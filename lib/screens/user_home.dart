@@ -11,7 +11,7 @@ class userHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List userList = Provider.of<List<UserModel>>(context);
-    FirebaseServices firebaseServices = FirebaseServices();
+    //FirebaseServices firebaseServices = FirebaseServices();
     var a = userList[1].name;
 
     return Scaffold(
