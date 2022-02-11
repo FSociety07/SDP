@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pickngo/model/main_screen.dart';
 import 'package:pickngo/model/user_data.dart';
+import 'package:provider/provider.dart';
+
+import '../model/firebase_services.dart';
+import '../model/user_model.dart';
 
 class userHomePage extends StatelessWidget {
-  
-
   @override
   Widget build(BuildContext context) {
+    List userList = Provider.of<List<UserModel>>(context);
+    FirebaseServices firebaseServices = FirebaseServices();
+    var a = userList[1].name;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('User Home'),
